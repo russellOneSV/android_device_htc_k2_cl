@@ -1,21 +1,15 @@
-USE_CAMERA_STUB := true
-
-# inherit from the proprietary version
--include vendor/htc/k2cl/BoardConfigVendor.mk
-
 # Platform
-TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM := msm8930
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := k2cl
+TARGET_BOOTLOADER_BOARD_NAME := k2_cl
 TARGET_NO_BOOTLOADER := true
 
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
-#TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -46,6 +40,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_VOLD_MAX_PARTITIONS := 38
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
+# Fix for flicker issue
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+
 # TWRP Specific
 DEVICE_RESOLUTION := 480x800
 TW_INTERNAL_STORAGE_PATH := "/internal_sdcard"
@@ -53,4 +50,6 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sdcard"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/htc/k2cl/recovery/graphics.c
+
+# For 4.3+
+HAVE_SELINUX := true
