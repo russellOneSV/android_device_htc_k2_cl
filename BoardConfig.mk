@@ -21,7 +21,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-TARGET_PREBUILT_KERNEL := device/htc/k2_ck/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/htc/k2_cl/prebuilt/kernel
 
 # fix this up by examining /proc/emmc on a running device
 TARGET_USERIMAGES_USE_EXT4 := true
