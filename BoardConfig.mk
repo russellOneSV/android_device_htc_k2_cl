@@ -43,13 +43,16 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 # Fix for flicker issue
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
+# For 4.3+
+HAVE_SELINUX := true
+
 # TWRP Specific
 DEVICE_RESOLUTION := 480x800
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_FLASH_FROM_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+
 TW_INTERNAL_STORAGE_PATH := "/internal_sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "internal_sdcard"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-TW_DEFAULT_EXTERNAL_STORAGE := true
-
-# For 4.3+
-HAVE_SELINUX := true
