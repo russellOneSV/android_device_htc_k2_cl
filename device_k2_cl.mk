@@ -27,13 +27,17 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     remount.qcom
 
-# vold config
-PRODUCT_COPY_FILES += \
-    device/htc/k2_cl/configs/vold.fstab:system/etc/vold.fstab
-
+# NFCEE access control
+#ifeq ($(TARGET_BUILD_VARIANT),user)
+#    NFCEE_ACCESS_PATH := device/htc/totemc2/configs/nfcee_access.xml
+#else
+#    NFCEE_ACCESS_PATH := device/htc/totemc2/configs/nfcee_access_debug.xml
+#endif
+#PRODUCT_COPY_FILES += \
+#    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+	
 # wifi config
 PRODUCT_COPY_FILES += \
-    device/htc/k2_cl/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
     device/htc/k2_cl/firmware/fw_bcm4334.bin:/system/etc/firmware/fw_bcm4334.bin \
     device/htc/k2_cl/firmware/fw_bcm4334_apsta.bin:/system/etc/firmware/fw_bcm4334_apsta.bin \
     device/htc/k2_cl/firmware/fw_bcm4334_p2p.bin:/system/etc/firmware/fw_bcm4334_p2p.bin \
@@ -84,13 +88,6 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
