@@ -100,6 +100,9 @@ on boot
     # low charge current in voice call
     chown radio radio /sys/class/power_supply/battery/phone_call
     chown radio radio /sys/class/power_supply/battery/network_search
+    
+    # fix cmdline permission
+    chmod 0644 /proc/cmdline
 
     # allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
