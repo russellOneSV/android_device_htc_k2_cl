@@ -26,8 +26,8 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# inherit from common msm8960
--include device/htc/msm8960-common/BoardConfigCommon.mk
+# inherit from S4 common
+-include device/htc/s4-common/BoardConfigCommon.mk
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8930
