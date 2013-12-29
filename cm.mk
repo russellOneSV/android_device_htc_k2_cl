@@ -12,7 +12,7 @@ TARGET_SCREEN_WIDTH := 480
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/htc/k2_cl/device_k2_cl.mk)
+$(call inherit-product, device/htc/k2_cl/device.mk)
 
 # Device naming
 PRODUCT_DEVICE := k2_cl
@@ -22,4 +22,4 @@ PRODUCT_MODEL := One SV
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_k2_cl BUILD_FINGERPRINT=boost/htc/k2cl:4.1.2/JZO54K/573038:user/user-debug PRIVATE_BUILD_DESC="4.1.2 JZO54K 573038 user-debug"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_k2_ul BUILD_FINGERPRINT=cingular_us/k2_ul/k2_ul:4.0.4/IMM76I/124286.5:user/release-keys PRIVATE_BUILD_DESC="=1.17.502.5 CL124286 release-keys" BUILD_NUMBER=96068

@@ -1,1 +1,4 @@
-Android device tree for HTC K2_CL (Boost LTE One SV)
+android_device_htc_k2_cl-NEW BASE
+===========
+
+CM11 Device Tree for Boost HTC One SV
