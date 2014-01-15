@@ -34,9 +34,9 @@ PRODUCT_MANUFACTURER := HTC
 
 # Kernel inline build
 TARGET_KERNEL_SOURCE := kernel/htc/k2
-TARGET_KERNEL_CONFIG := k2_cl_defconfig
-TARGET_VARIANT_CONFIG := k2_cl_defconfig
-#TARGET_SELINUX_CONFIG := k2cl_defconfig
+TARGET_KERNEL_CONFIG := k2_ul_defconfig
+TARGET_VARIANT_CONFIG := k2_ul_defconfig
+#TARGET_SELINUX_CONFIG := k2_ul_defconfig
 
 $(call inherit-product-if-exists, vendor/htc/k2_cl/device-vendor.mk)
 
