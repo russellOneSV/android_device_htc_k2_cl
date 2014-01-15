@@ -1,2 +1,2 @@
-add_lunch_combo cm_k2_cl-userdebug
-add_lunch_combo cm_k2_cl-eng
+add_lunch_combo hydrogen_k2_cl-userdebug
+add_lunch_combo hydrogen_k2_cl-eng
